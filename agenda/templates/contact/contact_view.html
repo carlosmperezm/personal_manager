@@ -1,0 +1,20 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %} Contact {{contact.name}} {% endblock %}
+
+{% block 'content' %}
+
+<span class='aux-btn'><a href="{% url 'contact_index' %}"> Go Back </a></span>
+
+<ul class='list'>
+  <li> <b>Name: </b> {{ contact.name }} </li>
+  <li> <b>Last Name: </b> {{ contact.last_name }} </li>
+  <li> <b>Phone: </b> {{ contact.phone }} </li>
+  <li> <b>Mobile: </b> {{ contact.mobile }} </li>
+  <li> <b>Email: </b> {{ contact.email }} </li>
+  <li> <b>Company: </b> {{ contact.company }} </li>
+  <li> <b>Date: </b> {{ contact.date }} </li>
+  <li> <b>Notes: </b> {{ contact.notes }} </li>
+</ul>
+
+{% endblock %}

@@ -1,0 +1,172 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+
+  background-color: #f0f0f0;
+}
+
+h1 {
+  color: DeepSkyBlue;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: DeepSkyBlue;
+  padding: 20px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 3em;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav li a {
+  color: White
+}
+
+nav li a:hover {
+  color: Gray;
+}
+
+main {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid Black;
+  width: 50%;
+}
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid Black;
+
+}
+
+.btn {
+  margin: 2px;
+  padding: 4px 3px;
+  text-decoration: none;
+  background-color: Gray;
+  border: 1px solid Black;
+  color: White;
+}
+
+.btn:hover {
+  background-color: DeepSkyBlue;
+}
+
+.btn-delete {
+  background-color: Red;
+}
+
+.btn-edit {
+  background-color: YellowGreen;
+}
+
+.btn-view {
+  background-color: MediumSlateBlue;
+}
+
+.search-form {
+  width: 50%;
+  margin: 10px;
+  padding: 5px;
+}
+
+.btn-search {
+  padding: 9px;
+  width: 15%;
+}
+
+.btn-search:hover {
+  cursor: pointer;
+  background-color: DeepSkyBlue;
+}
+
+
+.search-bar {
+  padding: 8px;
+  width: 80%;
+}
+
+.btn-send {
+  background-color: Green;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 10px;
+  width: 100%;
+}
+
+.succes-msg {
+  display: flex;
+  width: 100%;
+  padding: 5px;
+  margin: 10px;
+  background-color: Green;
+  color: White;
+  justify-content: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  align-items: center;
+  color: White;
+  margin: 20px;
+  background-color: deepskyblue;
+  text-decoration: none;
+}
+
+.card:hover {
+  background-color: Gray;
+}
+
+.cointainer-btn {
+  display: flex;
+  justify-content: initial;
+  margin: 10px;
+  width: 50%;
+}
+
+.letter-filter {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  width: 40%;
+}
+
+.letter-filter a {
+  text-decoration: none;
+  color: DeepSkyBlue;
+}

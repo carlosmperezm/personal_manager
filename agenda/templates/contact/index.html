@@ -1,0 +1,34 @@
+{% extends 'layouts/base.html' %}
+{% block 'title' %} Contact {% endblock %}
+
+{% block 'content' %}
+<h1> CONTACTS </h1>
+
+<form class='search-form' action='{% url 'contact_index' %}' method='GET'>
+  <input type='text' placeholder='Search User...' name='search' class='search-bar'>
+  <input type='submit' value='search' class='btn btn-search'>
+</form>
+
+<div class = 'cointainer-btn'>
+  <a href='{% url 'create_contact' %}' class='btn btn-primary'> Add Contact </a>
+</div>
+{% include 'contact/partials/letter_filter.html' %}
+
+<ul class='list'>
+
+  {% for contact in contacts %}
+    <li>
+      {{ contact }}
+
+      <span>
+        <a class='btn btn-view' href="{% url 'contact_view' id=contact.id %}"> Show </a>
+        <a class='btn btn-edit' href="{% url 'update_contact' id=contact.id %}">Edit </a>
+        <a class='btn btn-delete' href="{% url 'delete_contact' id=contact.id %}">Delete </a>
+      </span>
+
+    </li>
+  {% endfor %}
+
+</ul>
+
+{% endblock %}

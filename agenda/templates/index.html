@@ -1,0 +1,18 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %} Home {% endblock %}
+
+{% block 'content' %}
+  <h1>Welcome to your Personal Manager</h1>
+  <div class='cards'>
+    <a href="{% url 'contact_index' %}" class='card'>
+      <h2>Contacts</h2>
+      <p>Manage your contacts</p>
+    </a>
+    <a href="{% url 'todo_index' %}" class='card'>
+      <h2>Tasks</h2>
+      <p>Manage your tasks</p>
+      </a>
+    
+  </div>
+{% endblock %}

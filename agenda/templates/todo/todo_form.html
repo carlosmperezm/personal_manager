@@ -1,0 +1,30 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'content' %}
+
+{% if messages %}
+<ul class="messages">
+
+  {% for message in messages %}
+  <li {% if message.tags %} class="succes-msg" {% endif %}>{{ message }}</li>
+  {% endfor %}
+
+</ul>
+{% endif %}
+
+<span class='aux-btn'><a href="{% url 'todo_index' %}"> Go Back </a></span>
+
+{% if id %}
+<form action="{% url 'update_todo' id=id %}" method="POST">
+  {% endif %}
+
+
+  <form action="{% url 'create_todo' %}" method="POST">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <input class="btn btn-send" type="submit" value="Send">
+  </form>
+
+  {% endblock %}

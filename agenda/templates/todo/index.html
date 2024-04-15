@@ -1,0 +1,33 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %} Todo {% endblock %}
+
+{% block 'content' %}
+
+<h1> TODOS </h1>
+
+<form class='search-form' action='{% url 'todo_index' %}' method='GET'>
+  <input type='text' placeholder='Search Todo...' name='search' class='search-bar'>
+  <input type='submit' value='search' class='btn btn-search'>
+</form>
+
+<div class = 'cointainer-btn'>
+  <a href='{% url 'todo_index' %}' class='btn btn-primary'> Show All </a>
+  <a href='{% url 'create_todo' %}' class='btn btn-primary'> Add Todo </a>
+</div>
+
+<ul class='list'>
+
+  {% for todo in todos %}
+    <li> {{ todo }} 
+    <span>
+      <a href='{% url 'view_todo' id=todo.id %}' class='btn btn-view'> Show </a>
+      <a href='{% url 'update_todo' id=todo.id %}' class='btn btn-edit'> Edit </a>
+      <a href='{% url 'delete_todo' id=todo.id %}' class='btn btn-delete'> Delete </a>
+    </span>
+    </li>
+  {% endfor %}
+
+</ul>
+
+{% endblock %}

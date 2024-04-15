@@ -1,0 +1,17 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %} Todo {{todo.title}} {% endblock %}
+
+{% block 'content' %}
+
+<span class='aux-btn'><a href="{% url 'todo_index' %}"> Go Back </a></span>
+
+<ul class='list'>
+  <li> <b>Title: </b> {{ todo.title }} </li>
+  <li> <b>Descryption: </b> {{ todo.descryption }} </li>
+  <li> <b>Date: </b> {{ todo.date }} </li>
+  <li> <b>Estimed End: </b> {{ todo.estimed_end }} </li>
+  <li> <b>Priority: </b> {{ todo.priority }} </li>
+</ul>
+
+{% endblock %}
