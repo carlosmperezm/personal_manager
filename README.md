@@ -1,2 +1,2 @@
-# personal_manager
+# Personal Manager
 This a project with Django where I practiced my skills. I made a two CRUD apps where I use Databases,ORM,CSS,HTML and more...
